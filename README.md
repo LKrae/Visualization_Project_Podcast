@@ -40,7 +40,7 @@ The action genre is the most popular, followed by horror and comedy.
 
 Digging further into the genre, including the sub-genre, we see that Horror-Thriller was the most reviewed sub-genre.
 
-![](assets\Total_Count_By_Genre_SubGenre.png)
+![Total Count by Sub-Genre](assets\Total_Count_By_Genre_SubGenre.png)
 
 With respect to the MPA Rating, the most common rating is "R".
 
@@ -109,6 +109,17 @@ The visuals below shows where the two hosts disagree the most.  This visual is s
 The visual below is sorted by Bryan W.'s scores from highest to lowest where the two hosts differ the most.
 ![Score Differences - Bryan W.](assets/Score_Differences_BryanW.png)
 
+## Which decade do the hosts like the most/least?
+As a movie fan, there are special decades for movies.  Do the hosts prefer one decade over another?
+
+![Score by Decade](assets\Score_by_Decade.png)
+
+The chart below provides another way to view the scores by decade.  We can see that the 2000s appear to have a higher average score while the 1990s and 2010s have the highest rated movie(s).
+![Score by Decade](assets\Score_by_Decade2.png)
+
+In addition, are the specific years that produced better or worse movies?  Keep in mind, most of the movies reviewed are current theatrical releases.
+
+![Score by Year](assets\Score_vs_Year.png)
 
 ## Which movies spent the most/least per score point?
 I was really interested in how much movies spend per point.  Spending less per point means that a movie is utilizing its budget efficiently.  Ideally, a movie has a low budget and a high score.  The worst case scenarios is spending a lot of money and receiving a low score.  The following tables provide insight into the movies that spent the most and the least per point.
@@ -159,6 +170,11 @@ The table below outlines the movies that spent the least on each point in the cu
 | 76      | Top Gun: Maverick    | 2022         | 170000000  | 170.00            | PG-13  | Action   | Drama     | 130              | 9.00          | 9.40          | -0.40           | NaN                             | 2020   | 18.40           | Large       | Action-Drama   | 9239130.43       | 0.40          |
 | 41      | Batman               | 1989         | 35000000   | 35.00             | PG-13  | Super Hero | NaN       | 126              | 9.00          |
 
+## Bryan B.'s Scores vs Budget Type
+Does budget affect Bryan B.'s scores?
+![Bryan B.'s Scores vs Budget Type](assets\BryanBScore_vs_BudgetType.png)
+
+
 ## Bryan W's Top 10 Movies
 | Episode | Title                              | Release Date | Budget     | Budget (Millions) | Rating | Genre     | Sub-Genre | Run Time Minutes | Bryan B Score | Bryan W Score | Score Difference | Notes                           | Decade | Cumulative Score | Budget Type | Specific Genre    | Budget Per Point | Difference AV |
 |---------|------------------------------------|--------------|------------|-------------------|--------|-----------|-----------|------------------|---------------|---------------|-----------------|---------------------------------|--------|-----------------|-------------|-------------------|------------------|---------------|
@@ -173,8 +189,12 @@ The table below outlines the movies that spent the least on each point in the cu
 | 76      | Top Gun: Maverick                  | 2022         | 170000000  | 170.00            | PG-13  | Action    | Drama     | 130              | 9.00          | 9.40          | -0.40           | NaN                             | 2020   | 18.40           | Large       | Action-Drama     | 9239130.43       | 0.40          |
 | 66      | The Dark Night                     | 2008         | 185000000  | 185.00            | PG-13  | Super Hero | NaN       |
 
+## Bryan W.'s Scores vs Budget Type
+Does budget affect Bryan W.'s scores?
+![Bryan W.'s Scores vs Budget Type](assets\BryanWScore_vs_BudgetType.png)
+
 # Conclusion
-This was a really fun and interesting project to tackle.  I enjoyed collecting the data, creating the visuals, and analyzing the outputs.
+This was a really fun and interesting project to tackle.  I enjoyed collecting the data, creating the visuals, and analyzing the outputs.  My goal was to understand how the hosts differ, how their scores align with my own "score" of the movie, and how various movie variables (e.g., budget) impacted the scores.
 
 
 
