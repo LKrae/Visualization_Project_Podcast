@@ -32,11 +32,11 @@ Bryan Vs Bryan has reviewed 184 movies (as of 7/7/2024).
 
 The action genre is the most popular, followed by horror and comedy.
 
-![Total Count by Genre](assets\Total_Count_By_Genre.png)
+![Total Count by Genre](assets/Total_Count_By_Genre.png)
 
 With respect to the MPA Rating, the most common rating is "R".
 
-![Total Count by Rating](assets\Total_Count_By_Rating.png)
+![Total Count by Rating](assets/Total_Count_By_Rating.png)
 
 ## Which movies are the highest/lowest rated (cumulative score)?
 
@@ -73,14 +73,14 @@ With respect to the MPA Rating, the most common rating is "R".
 ## Which host consistently rates movies higher than the other?
 Bryan B. seems to give movies higher scores with lower variation.
 
-![Host Boxplot](assets\Host_Boxplot.png)
+![Host Boxplot](assets/Host_Boxplot.png)
 
 ## How do each host's scores differ?
 This carries into the score distributions by movie genre.
 
-![Score Distribution by Genre](assets\Score_Comparison_By_Genre.png)
+![Score Distribution by Genre](assets/Score_Comparison_By_Genre.png)
 
-![Score Distribution](assets\Score_Distribution.png)
+![Score Distribution](assets/Score_Distribution.png)
 
 
 ## Which movies do the two hosts agree/disagree the most?
@@ -90,10 +90,10 @@ This carries into the score distributions by movie genre.
 
 
 Update...
-![Score Differences - Bryan B.](assets\Score_Differences_BryanB.png)
+![Score Differences - Bryan B.](assets/Score_Differences_BryanB.png)
 
 Update...
-![Score Differences - Bryan W.](assets\Score_Differences_BryanW.png)
+![Score Differences - Bryan W.](assets/Score_Differences_BryanW.png)
 
 
 ## Which movies spent the most/least per score point?
