@@ -1,23 +1,27 @@
 # Introduction
-This project looked at movie score data from the Bryan vs Bryan podcast.  I decided to collect and analyze the data for movies being reviewed.
+This project looked to visualize movie data from the Bryan vs Bryan podcast.  I wanted to understand how each host scored movies. I decided to collect and analyze their scores along with the metadata for the movies being reviewed.
 
- [!NOTE] Not all of the podcast episodes are for movies.  This dataset is for the movie episodes only.
+A big thanks to Bryan B. for giving me permission to publish this work.
 
- # Data Update
+>[!NOTE]
+Not all of the podcast episodes are for movies.  This dataset is for the movie episodes only.
+
+ # Data Updates
  I'll try to update the dataset when a new episode is released.
 
 
 # Background
-The motivation behind this project was that I wanted to understand and visualize the movie score data for each host. I was also curious as to how they would compare or differ across various variables (e.g., budget or length)
+The motivation behind this project was that I wanted to understand and visualize the movie score data for each host. I was also curious as to how they would compare or differ across various variables (e.g., budget, movie length, etc.)
 
 The questions that I was really interested in were:
 
 1. Which movies are the highest/lowest rated (cumulative score)?
-2. Which host consistently rates movies higher than the other?
-3. How do each host's scores differ?
-4. How does genre, budget, MPA rating, and length impact the score?
-5. Which movies do the two hosts agree/disagree the most?
-6. Which movies spent the most/least per score point?
+2. How do each host's scores compare/differ?
+    - Does one host tend to rate things higher?
+3. How does genre, budget, MPA rating, and length impact the score?
+4. Which movies do the two hosts agree/disagree the most?
+5. Which movies spent the most/least per score point?
+
 
 # Analysis
 Bryan Vs Bryan has reviewed 184 movies (as of 7/7/2024).
@@ -34,14 +38,18 @@ The action genre is the most popular, followed by horror and comedy.
 
 ![Total Count by Genre](assets/Total_Count_By_Genre.png)
 
+Digging further into the genre, including the sub-genre, we see that Horror-Thriller was the most reviewed sub-genre.
+
+![](assets\Total_Count_By_Genre_SubGenre.png)
+
 With respect to the MPA Rating, the most common rating is "R".
 
 ![Total Count by Rating](assets/Total_Count_By_Rating.png)
 
 ## Which movies are the highest/lowest rated (cumulative score)?
+I was really curious to see how the host's views of movies align with my own.  Which movies did they love and which did they really dislike?  The Top 10 movies (below) provide in glimpse at which movies both hosts loved.
 
 ### Top 10 Movies (Highest Cumulative Score)
-
 | Episode | Title                  | Bryan_B_Score | Bryan_W_Score | Cumulative_Score | Budget       | Budget_Per_Point |
 |---------|------------------------|---------------|---------------|------------------|--------------|------------------|
 | 148     | Django Unchained       | 10.00         | 10.00         | 20.00            | $100,000,000 | $5,000,000       |
@@ -56,7 +64,9 @@ With respect to the MPA Rating, the most common rating is "R".
 | 12      | Ghostbusters           | 9.00          | 9.00          | 18.00            | $30,000,000  | $1,666,667       |
 
 
-### Biggest Flops (Lowest Cumulative Score)
+### Top 10 Flops (Lowest Cumulative Score)
+I also wanted to see which movies were the worst rated.  The Top 10 Flops show which movies recieved the lowest cumulative scores.
+
 | Episode | Title                    | Bryan_B_Score | Bryan_W_Score | Cumulative_Score | Budget       | Budget_Per_Point |
 |---------|--------------------------|---------------|---------------|------------------|--------------|------------------|
 | 30      | Tom and Jerry            | 3.70          | 3.00          | 6.70             | $79,000,000  | $11,791,045      |
@@ -71,36 +81,40 @@ With respect to the MPA Rating, the most common rating is "R".
 | 78      | The Lawnmower Man        | 4.20          | 5.50          | 9.70             | $10,000,000  | $1,030,928       |
 
 ## Which host consistently rates movies higher than the other?
-Bryan B. seems to give movies higher scores with lower variation.
+Bryan B. seems to give movies slightly higher scores with lower variation.  However, the hosts tend to agree more often than not.
 
 ![Host Boxplot](assets/Host_Boxplot.png)
 
 ## How do each host's scores differ?
-This carries into the score distributions by movie genre.
+This carries into the score distributions by movie genre.  Brian B. showing a slight edge in mean score across most genres.  Bryan W. tends to have a broader range of scores across genres.
 
 ![Score Distribution by Genre](assets/Score_Comparison_By_Genre.png)
+
+The distribution below provides insight into how the score are distributed for each host.  The skew for both hosts is slightly negative meaning that the distribution of the scores is skewed to the left.  This means that a majority of the reviews are positive.  The also both have negative kurtosis values (platykurtosis) which indicates that the scores are more evently distributed around the mean with fewer extremely high or low scores.
+
+ - Bryan B's Distribution:
+     - Skew: -0.417
+    - Kurtosis: -0.038
+ - Bryan W's Distribution:
+    - Skew: -0.136
+    - Kurtosis: -0.538
 
 ![Score Distribution](assets/Score_Distribution.png)
 
 
 ## Which movies do the two hosts agree/disagree the most?
-
-
-## Which movies do the two hosts agree/disagree the most?
-
-
-Update...
+The visuals below shows where the two hosts disagree the most.  This visual is sorted by Bryan B.'s scores from highest to lowest where the two hosts disagree.  This highlights the differences in how each host viewed these movies because it wasn't always the same host scoring the movie higher.
 ![Score Differences - Bryan B.](assets/Score_Differences_BryanB.png)
 
-Update...
+The visual below is sorted by Bryan W.'s scores from highest to lowest where the two hosts differ the most.
 ![Score Differences - Bryan W.](assets/Score_Differences_BryanW.png)
 
 
 ## Which movies spent the most/least per score point?
-I was really interested in how much movies spend per point.  Spending less per point means that a movie is utilizing its budget efficiently.  Ideally, a movie has a low budget and a high score.  Worst case scenarios is spending a lot of money and receiving a low score.  The following tables provide insight into the moves that spent the most and the least per point.
+I was really interested in how much movies spend per point.  Spending less per point means that a movie is utilizing its budget efficiently.  Ideally, a movie has a low budget and a high score.  The worst case scenarios is spending a lot of money and receiving a low score.  The following tables provide insight into the movies that spent the most and the least per point.
 
 ### Top 10 Highest Spent Per Point
-
+The table below outlines the movies that spent the most on each point in the cumulative score.
 | Episode | Title                           | Bryan_B_Score | Bryan_W_Score | Cumulative_Score | Budget       | Budget_Per_Point       |
 |---------|---------------------------------|---------------|---------------|------------------|--------------|------------------------|
 | 124     | Avatar: Way of Water            | 6.70          | 8.20          | 14.90            | $350,000,000 | $23,489,932.89         |
@@ -115,6 +129,7 @@ I was really interested in how much movies spend per point.  Spending less per p
 | 184     | The Marvels                     | 6.00          | 7.10          | 13.10            | $220,000,000 | $16,793,893.13         |
 
 ### Top 10 Lowest Spend Per Point
+The table below outlines the movies that spent the least on each point in the cumulative score.  These are the best "bang for your buck" movies.
 | Episode | Title                  | Bryan_B_Score | Bryan_W_Score | Cumulative_Score | Budget     | Budget_Per_Point |
 |---------|------------------------|---------------|---------------|------------------|------------|------------------|
 | 10      | The Blair Witch Project| 10.00         | 10.00         | 20.00            | $60,000    | $3,000.00        |
@@ -130,11 +145,37 @@ I was really interested in how much movies spend per point.  Spending less per p
 
 
 
-
-# Conclusion
-
-
 ## Bryan B's Top 10 Movies
-
+| Episode | Title                | Release Date | Budget     | Budget (Millions) | Rating | Genre    | Sub-Genre | Run Time Minutes | Bryan B Score | Bryan W Score | Score Difference | Notes                           | Decade | Cumulative Score | Budget Type | Specific Genre | Budget Per Point | Difference AV |
+|---------|----------------------|--------------|------------|-------------------|--------|----------|-----------|------------------|---------------|---------------|-----------------|---------------------------------|--------|-----------------|-------------|----------------|------------------|---------------|
+| 125     | Django Unchained     | 2012         | 100000000  | 100.00            | R      | Drama    | Western   | 165              | 10.00         | 10.00         | 0.00            | NaN                             | 2010   | 20.00           | Large       | Drama-Western  | 5000000.00       | 0.00          |
+| 1       | The Blair Witch Project | 1999       | 60000      | 0.06              | R      | Horror   | Mystery   | 81               | 10.00         | 10.00         | 0.00            | NaN                             | 1990   | 20.00           | Micro       | Horror-Mystery | 3000.00          | 0.00          |
+| 45      | The Shining          | 1980         | 19000000   | 19.00             | R      | Drama    | Horror    | 144              | 9.60          | 9.70          | -0.10           | NaN                             | 1980   | 19.30           | Medium      | Drama-Horror   | 984455.96        | 0.10          |
+| 54      | Spider Man 2         | 2004         | 200000000  | 200.00            | PG-13  | Super Hero | NaN       | 127              | 9.40          | 9.60          | -0.20           | NaN                             | 2000   | 19.00           | Large       | NaN            | 10526315.79      | 0.20          |
+| 66      | The Dark Night       | 2008         | 185000000  | 185.00            | PG-13  | Super Hero | NaN       | 152              | 9.30          | 9.30          | 0.00            | Mentioned in this episode       | 2000   | 18.60           | Large       | NaN            | 9946236.56       | 0.00          |
+| 105     | The Departed         | 2006         | 90000000   | 90.00             | R      | Crime    | Thriller  | 151              | 9.30          | 9.60          | -0.30           | NaN                             | 2000   | 18.90           | Large       | Crime-Thriller | 4761904.76       | 0.30          |
+| 137     | Training Day         | 2001         | 45000000   | 45.00             | R      | Crime    | Thriller  | 122              | 9.30          | 8.50          | 0.80            | NaN                             | 2000   | 17.80           | Medium      | Crime-Thriller | 2528089.89       | 0.80          |
+| 96      | American Gangster    | 2007         | 100000000  | 100.00            | R      | Biography | Drama     | 157              | 9.10          | 8.50          | 0.60            | NaN                             | 2000   | 17.60           | Large       | Biography-Drama | 5681818.18       | 0.60          |
+| 76      | Top Gun: Maverick    | 2022         | 170000000  | 170.00            | PG-13  | Action   | Drama     | 130              | 9.00          | 9.40          | -0.40           | NaN                             | 2020   | 18.40           | Large       | Action-Drama   | 9239130.43       | 0.40          |
+| 41      | Batman               | 1989         | 35000000   | 35.00             | PG-13  | Super Hero | NaN       | 126              | 9.00          |
 
 ## Bryan W's Top 10 Movies
+| Episode | Title                              | Release Date | Budget     | Budget (Millions) | Rating | Genre     | Sub-Genre | Run Time Minutes | Bryan B Score | Bryan W Score | Score Difference | Notes                           | Decade | Cumulative Score | Budget Type | Specific Genre    | Budget Per Point | Difference AV |
+|---------|------------------------------------|--------------|------------|-------------------|--------|-----------|-----------|------------------|---------------|---------------|-----------------|---------------------------------|--------|-----------------|-------------|-------------------|------------------|---------------|
+| 125     | Django Unchained                   | 2012         | 100000000  | 100.00            | R      | Drama     | Western   | 165              | 10.00         | 10.00         | 0.00            | NaN                             | 2010   | 20.00           | Large       | Drama-Western    | 5000000.00       | 0.00          |
+| 1       | The Blair Witch Project            | 1999         | 60000      | 0.06              | R      | Horror    | Mystery   | 81               | 10.00         | 10.00         | 0.00            | NaN                             | 1990   | 20.00           | Micro       | Horror-Mystery   | 3000.00          | 0.00          |
+| 45      | The Shining                        | 1980         | 19000000   | 19.00             | R      | Drama     | Horror    | 144              | 9.60          | 9.70          | -0.10           | NaN                             | 1980   | 19.30           | Medium      | Drama-Horror     | 984455.96        | 0.10          |
+| 54      | Spider Man 2                       | 2004         | 200000000  | 200.00            | PG-13  | Super Hero | NaN       | 127              | 9.40          | 9.60          | -0.20           | NaN                             | 2000   | 19.00           | Large       | NaN              | 10526315.79      | 0.20          |
+| 105     | The Departed                       | 2006         | 90000000   | 90.00             | R      | Crime     | Thriller  | 151              | 9.30          | 9.60          | -0.30           | NaN                             | 2000   | 18.90           | Large       | Crime-Thriller   | 4761904.76       | 0.30          |
+| 146     | Killers of the Flower Moon          | 2023         | 200000000  | 200.00            | R      | Crime     | History   | 206              | 7.60          | 9.50          | -1.90           | NaN                             | 2020   | 17.10           | Large       | Crime-History    | 11695906.43      | 1.90          |
+| 65      | The Batman                         | 2022         | 185000000  | 185.00            | PG-13  | Super Hero | NaN       | 176              | 8.90          | 9.50          | -0.60           | NaN                             | 2020   | 18.40           | Large       | NaN              | 10054347.83      | 0.60          |
+| 143     | Spiderman: Across the Spiderverse   | 2023         | 150000000  | 150.00            | PG     | Animated  | Super Hero | 140              | 8.10          | 9.50          | -1.40           | NaN                             | 2020   | 17.60           | Large       | Animated-Super Hero | 8522727.27       | 1.40          |
+| 76      | Top Gun: Maverick                  | 2022         | 170000000  | 170.00            | PG-13  | Action    | Drama     | 130              | 9.00          | 9.40          | -0.40           | NaN                             | 2020   | 18.40           | Large       | Action-Drama     | 9239130.43       | 0.40          |
+| 66      | The Dark Night                     | 2008         | 185000000  | 185.00            | PG-13  | Super Hero | NaN       |
+
+# Conclusion
+This was a really fun and interesting project to tackle.  I enjoyed collecting the data, creating the visuals, and analyzing the outputs.
+
+
+
+*Data Source: Bryan vs Bryan Podcast and [IMDB](https://www.imdb.com/)*
