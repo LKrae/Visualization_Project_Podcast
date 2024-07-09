@@ -38,7 +38,7 @@ With respect to the MPA Rating, the most common rating is "R".
 
 ![Total Count by Rating](assets\Total_Count_By_Rating.png)
 
-## Question 1: Which movies are the highest/lowest rated (cumulative score)?
+## Which movies are the highest/lowest rated (cumulative score)?
 
 ### Top 10 Movies (Highest Cumulative Score)
 
