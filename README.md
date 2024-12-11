@@ -95,7 +95,7 @@ This carries into the score distributions by movie genre.  Brian B. showing a sl
 
 ## How to the score distributions differ between genres?
 
-The following chart provides another way to view the detail between the cumulative score distributions between the genres.  It is sorted by the mean cumulative score for each genere.
+The following chart provides another way to view the detail between the cumulative score distributions between the genres.  It is sorted by the mean cumulative score for each genre.
 
 ![Genre Distributions](assets/Cumulative_Score_Distribution_by_Genre.png)
 
