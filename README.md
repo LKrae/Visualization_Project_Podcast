@@ -97,7 +97,7 @@ This carries into the score distributions by movie genre.  Brian B. showing a sl
 
 The following chart provides another way to view the detail between the cumulative score distributions between the genres.  It is sorted by the mean cumulative score for each genere.
 
-![Genre Distributions](assets\Cumulative_Score_Distribution_by_Genre.png)
+![Genre Distributions](assets/Cumulative_Score_Distribution_by_Genre.png)
 
 
 ## How do the host's overall scores compare?
